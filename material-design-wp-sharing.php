@@ -11,6 +11,12 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+$mdsh_path = plugin_dir_url( __FILE__ );
+
+// Add fontawesome
+wp_register_style('Font Awesome', $mdsh_path . '/assets/css/font-awesome.min.css');
+wp_enqueue_style( 'Font Awesome');
+
 ////////////////
 //// Functionality
 ////////////////
