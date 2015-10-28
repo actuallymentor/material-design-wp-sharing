@@ -90,7 +90,7 @@ function mdsh_share() {
 			bottom:205px;
 		}
 		.mdsh_share {
-			position: relative;
+			position: absolute;
 			color: white;
 			top: 50%;
 			left: 50%;
