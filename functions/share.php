@@ -78,6 +78,7 @@ function mdsh_share() {
 			position: fixed;
 			bottom: 10px;
 			top: inherit;
+			z-index: 999999;
 		}
 		<?php 
 		if (get_option('mdsh_position') == "left") {
