@@ -3,7 +3,7 @@
  * Plugin Name: WP Material Share
  * Plugin URI: https://github.com/actuallymentor/material-design-wp-sharing
  * Description: Google Inbox style buttonfor social sharing
- * Version: 0.0.1
+ * Version: 1.0.0
  * Author: Mentor Palokaj
  * Author URI: https://www.skillcollector.com
  * License: MIT
@@ -35,5 +35,10 @@ add_action( 'wp_head', current_jquery( '2.1.4' ) );
 //// Functionality
 ////////////////
 include( __DIR__ . '/functions/share.php');
+
+////////////////
+//// Admin area
+////////////////
+include( __DIR__ . '/functions/admin.php');
 
 ?>

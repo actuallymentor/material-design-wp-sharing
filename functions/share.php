@@ -20,7 +20,7 @@ function mdsh_share() {
 
 	// Sharing links
 	$mdsh_share_facebook = 'https://www.facebook.com/sharer/sharer.php?' . $mdsh_current;
-	$mdsh_share_twitter = 'https://twitter.com/intent/tweet?text=' . $mdsh_share_title . ' - ' . '&via=ActuallyMentor&url=' . $mdsh_current;
+	$mdsh_share_twitter = 'https://twitter.com/intent/tweet?text=' . $mdsh_share_title . ' - ' . '&via=' . esc_attr( get_option('mdsh_twitter') ) . '&url=' . $mdsh_current;
 	$mdsh_share_linkedin = 'https://www.linkedin.com/shareArticle?mini=true&url=' . $mdsh_current;
 
 	?>
