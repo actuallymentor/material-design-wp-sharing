@@ -44,7 +44,6 @@ function mdsh_share() {
 		.circle {
 			width:60px;
 			height:60px;
-			box-shadow: 1px 1px 3px #7D7D7D; 
 			border-radius:50%;
 			position: absolute;
 			right: 50%;
@@ -54,6 +53,9 @@ function mdsh_share() {
 			-moz-transition:all 0.2s linear;
 			-ms-transition:all 0.2s linear;
 			transition:all 0.2s linear;
+		}
+		.container_circle:hover .circle, .container_circle.hovered .circle, .base_button {
+			box-shadow: 1px 1px 3px #7D7D7D;
 		}
 		.base_button {
 			background-color:#db4531;
@@ -73,8 +75,8 @@ function mdsh_share() {
 		}
 		.container_circle {
 			position: fixed;
-			bottom: 0;
-			left: 40px;
+			bottom: 10px;
+			right: 50px;
 			top: inherit;
 		}
 		.container_circle:hover .base_button {
