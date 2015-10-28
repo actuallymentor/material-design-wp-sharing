@@ -73,12 +73,27 @@ function mdsh_share() {
 			z-index: 3;
 			background-color: #007bb6;
 		}
+		
 		.container_circle {
 			position: fixed;
 			bottom: 10px;
-			right: 50px;
 			top: inherit;
 		}
+		<?php 
+		if (get_option('mdsh_position') == "left") {
+			echo '.container_circle {
+				left: 50px;
+			}';
+		} elseif (get_option('mdsh_position') == "right") {
+			echo '.container_circle {
+				right: 50px;
+			}';
+		} else {
+			echo '.container_circle {
+				right: 50px;
+			}';
+		}
+		?>
 		.container_circle:hover .base_button {
 
 		}
@@ -107,19 +122,21 @@ function mdsh_share() {
 
 function mdsh_bounce() {
 	?>
-	<script>
-		$( document ).ready(function() {
-			
-			setTimeout(function() {
-				$(".container_circle").toggleClass("hovered");
-			}, 1000);
-			setTimeout(function() {
-				$(".container_circle").toggleClass("hovered");
-			}, 3000);
-			
-		});
+	<?php if ( get_option('mdsh_active') == "on" ): ?>
+		<script>
+			$( document ).ready(function() {
 
-	</script>
+				setTimeout(function() {
+					$(".container_circle").toggleClass("hovered");
+				}, 1000);
+				setTimeout(function() {
+					$(".container_circle").toggleClass("hovered");
+				}, 3000);
+
+			});
+
+		</script>
+	<?php endif ?>
 	<?php
 }
 

@@ -8,7 +8,8 @@ function mdsh_menu() {
 
 function register_mdsh_settings() { // whitelist options
 	register_setting( 'mdsh_settings', 'mdsh_twitter' );
-
+	register_setting( 'mdsh_settings', 'mdsh_active' );
+	register_setting( 'mdsh_settings', 'mdsh_position' );
 }
 
 function mdsh_options() {
@@ -25,6 +26,19 @@ function mdsh_options() {
 			
 			<p>Your twitter username (without @)</p>
 			<input type="text" name="mdsh_twitter" value="<?php echo esc_attr( get_option('mdsh_twitter') ); ?>" />
+
+			<p>Draw attention to the sharing bar by expanding and collapsing it?</p>
+			<select name="mdsh_active">
+				<option value="on" <?php if ( esc_attr( get_option('mdsh_active') ) == "on" ) { echo "selected"; }; ?> >On</option>
+				<option value="off" <?php if ( esc_attr( get_option('mdsh_active') ) != "on" ) { echo "selected"; }; ?> >Off</option>
+			<select>
+
+			<p>Show the button on the:</p>
+			<select name="mdsh_position">
+				<option value="left" <?php if ( esc_attr( get_option('mdsh_position') ) == "left" ) { echo "selected"; }; ?> >Left</option>
+				<option value="right" <?php if ( esc_attr( get_option('mdsh_position') ) != "left" ) { echo "selected"; }; ?> >Right</option>
+			<select>
+
 			<?php submit_button(); ?>
 		
 		</form>
