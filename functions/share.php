@@ -19,7 +19,7 @@ function mdsh_share() {
 	$mdsh_share_title = get_the_title();
 
 	// Sharing links
-	$mdsh_share_facebook = 'https://www.facebook.com/sharer/sharer.php?' . $mdsh_current;
+	$mdsh_share_facebook = 'https://www.facebook.com/sharer/sharer.php?u=' . $mdsh_current;
 	$mdsh_share_twitter = 'https://twitter.com/intent/tweet?text=' . $mdsh_share_title . ' - ' . '&via=' . esc_attr( get_option('mdsh_twitter') ) . '&url=' . $mdsh_current;
 	$mdsh_share_linkedin = 'https://www.linkedin.com/shareArticle?mini=true&url=' . $mdsh_current;
 
@@ -28,13 +28,13 @@ function mdsh_share() {
 		<div class="circle base_button">
 			<i class="mdsh_share fa fa-share-alt"></i>
 		</div>
-		<a target="_blank" href="<?php echo $mdsh_share_facebook; ?>">
+		<a id="mdsh_fb" target="_blank" href="<?php echo $mdsh_share_facebook; ?>">
 			<div class="circle facebook"><i class="mdsh_share fa fa-facebook"></i></div>
 		</a>
-		<a target="_blank" href="<?php echo $mdsh_share_twitter; ?>">
+		<a id="mdsh_twi" target="_blank" href="<?php echo $mdsh_share_twitter; ?>">
 			<div class="circle twitter"><i class="mdsh_share fa fa-twitter"></i></div>
 		</a>
-		<a target="_blank" href="<?php echo $mdsh_share_linkedin; ?>">
+		<a id="mdsh_lin" target="_blank" href="<?php echo $mdsh_share_linkedin; ?>">
 			<div class="circle linkedin"><i class="mdsh_share fa fa-linkedin"></i></div>
 		</a>
 	</div>
