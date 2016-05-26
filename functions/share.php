@@ -41,7 +41,7 @@ function mdsh_share() {
 
 
 	<style>
-		.circle {
+		.container_circle .circle {
 			width:60px;
 			height:60px;
 			border-radius:50%;
@@ -62,24 +62,24 @@ function mdsh_share() {
 		.container_circle:hover .circle, .container_circle.hovered .circle, .base_button {
 			box-shadow: 1px 1px 3px #7D7D7D;
 		}
-		.base_button {
+		.container_circle .base_button {
 			background-color:#db4531;
 			z-index: 4;
 		}
-		.facebook {
+		.container_circle .facebook {
 			z-index: 2;
 			background-color: #3b5998;
 		}
-		.twitter {
+		.container_circle .twitter {
 			z-index: 1;
 			background-color: #00aced;
 		}
-		.linkedin {
+		.container_circle .linkedin {
 			z-index: 3;
 			background-color: #007bb6;
 		}
 		
-		.container_circle {
+		.container_circle .container_circle {
 			position: fixed;
 			bottom: 10px;
 			top: inherit;
