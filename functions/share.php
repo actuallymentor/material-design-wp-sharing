@@ -53,6 +53,11 @@ function mdsh_share() {
 			-moz-transition:all 0.2s linear;
 			-ms-transition:all 0.2s linear;
 			transition:all 0.2s linear;
+			-webkit-transition-delay: 0.2s;
+			-moz-transition-delay: 0.2s;
+			-ms-transition-delay: 0.2s;
+			transition-delay: 0.2s;
+
 		}
 		.container_circle:hover .circle, .container_circle.hovered .circle, .base_button {
 			box-shadow: 1px 1px 3px #7D7D7D;
@@ -121,26 +126,5 @@ function mdsh_share() {
 	<?php
 }
 
-function mdsh_bounce() {
-	?>
-	<?php if ( get_option('mdsh_active') == "on" ): ?>
-		<script>
-			$( document ).ready(function() {
-
-				setTimeout(function() {
-					$(".container_circle").toggleClass("hovered");
-				}, 1000);
-				setTimeout(function() {
-					$(".container_circle").toggleClass("hovered");
-				}, 3000);
-
-			});
-
-		</script>
-	<?php endif ?>
-	<?php
-}
-
 add_action( 'wp_footer', 'mdsh_share' );
-add_action( 'wp_footer', 'mdsh_bounce' );
 ?>

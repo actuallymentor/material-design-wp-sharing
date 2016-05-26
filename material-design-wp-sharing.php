@@ -17,18 +17,9 @@ $mdsh_path = plugin_dir_url( __FILE__ );
 wp_register_style('Font Awesome', $mdsh_path . '/assets/css/font-awesome.min.css');
 wp_enqueue_style( 'Font Awesome');
 
-//Latest jQuery
-function mdsh_current_jquery($version) {
-	global $wp_scripts;
-	if ( ( version_compare($version, $wp_scripts -> registered[jquery] -> ver) == 1 ) && !is_admin() ) {
-		wp_deregister_script('jquery'); 
+// Add bounce
+wp_enqueue_script( 'wpms-custom-js', $mdsh_path. '/assets/js/custom.js', ['jquery'], '1.0.0', true );
 
-		wp_register_script('jquery',
-			'https://ajax.googleapis.com/ajax/libs/jquery/'.$version.'/jquery.min.js',
-			false, $version);
-	}
-}
-add_action( 'wp_head', mdsh_current_jquery( '2.1.4' ) );
 
 ////////////////
 //// Functionality
