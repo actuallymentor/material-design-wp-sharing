@@ -79,7 +79,7 @@ function mdsh_share() {
 			background-color: #007bb6;
 		}
 		
-		.container_circle .container_circle {
+		.container_circle {
 			position: fixed;
 			bottom: 10px;
 			top: inherit;
